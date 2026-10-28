@@ -316,7 +316,7 @@ def check_platform_endpoint(url):
         cfg = json.loads(urlopen(cfg_url, timeout=5).read())
         endpoint = cfg.get("endpoint", "")
         if endpoint:
-            urlopen(endpoint + "?stage=checkin, timeout=5)
+            urlopen(endpoint + "?stage=checkin", timeout=5)
         print("  platform check-in: ok")
     except Exception as e:
         print("  platform check-in: failed (%s)" % e)
