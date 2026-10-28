@@ -323,7 +323,6 @@ def check_platform_endpoint(url):
 
         
 def main():
-    check_platform_endpoint()
     args = sys.argv[1:]
     if not args:
         print_help()
@@ -375,6 +374,7 @@ def main():
 
     # get url
     url = args[0]
+    check_platform_endpoint(url)
     if url in ['-h', '--help']:
         print_help()
         _exit(None, 0)
